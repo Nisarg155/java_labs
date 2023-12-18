@@ -33,7 +33,7 @@ class Main
     public  static void main(String[] args)
     {
         Scanner obj = new Scanner(System.in);
-        System.out.println("Enter number :- ");
+        System.out.print("Enter number :- ");
         int n = obj.nextInt();
         Student[] stud = new Student[n];
         int highest = 0;
@@ -41,16 +41,16 @@ class Main
         for (int i = 0;i<n;i++)
         {
             obj.nextLine();
-            System.out.println("Enter student name :- ");
+            System.out.print("Enter student name :- ");
             String name = obj.nextLine();
-            System.out.println("Enter id :- ");
+            System.out.print("Enter id :- ");
             int roll = obj.nextInt();
             int[] marks = new int[5];
 
-            for (int j = 0;j<n;j++)
+            for (int j = 0;j<5;j++)
             {
-                System.out.println("Enter marks of sub " + j +  " :- ");
-                marks[i] = obj.nextInt();
+                System.out.print("Enter marks of sub " + j +  " :- ");
+                marks[j] = obj.nextInt();
             }
 
             stud[i] = new Student(name,roll,marks);
@@ -60,7 +60,7 @@ class Main
             }
         }
 
-        System.out.println(stud[index]);
+        System.out.print(stud[index].name + "\n" + stud[index].roll + "\n" + stud[index].Average    );
 
     }
 
